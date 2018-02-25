@@ -1,6 +1,7 @@
 import discord
 import asyncio
 import random
+from config import *
 
 quotes=[
     '”Appear weak when you are strong, and strong when you are weak.” ― Sun Tzu, The Art of War',
@@ -25,4 +26,4 @@ async def on_message(message):
   if message.content.startswith('!quote'):
      await client.send_message(message.channel, random.choice(quotes))
 
-client.run('NDE1NjU5NzAwNzU2MDIxMjY4.DXOOGw.AOV9qfSSGQGVbEapQ-h62Fvh2lU')
+client.run(token)
